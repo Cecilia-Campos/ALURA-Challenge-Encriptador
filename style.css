@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    /* color fondo de la página */
+    --color-primario: #F3F5FC;
+    /* color output-section */
+    --color-secundario: #D8DFE8;
+    /* color azul oscuro textos */
+    --color-terciario: #0A3871;
+    /* color gris oscuro textos */
+    --color-cuaternario: #343A40;
+    /* --color-hover: #F7E7DC; */
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuent-krona: "Krona One", sans-serif;
+    --fuente-inter: "Inter", sans-serif;
+}   
+
+/*estilos globales*/
+
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: dimgray;
+    box-sizing: border-box;
+
+    background-image: url(assets/fondo_oscuro.jpg);
+    
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: sticky;
+    
+    background-color: rgb(65, 63, 63);
+    height: max-content;
+}
+
+/*Estilos de las secciones principales del HTML*/
+
+body{
+    
+    width: 100vw;
+    height: 100dvh;
+    max-width: 1240px;
+    max-height: 1024px;
+    margin: auto;
+}
+
+header{
+
+    width: 100%;
+    height: 10%;
+
+}
+
+main{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    
+    border: solid dimgray 1px;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 15px;
+}
+
+footer{
+
+    display: flex;
+    height: 10%;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*encabezado*/
+
+
+.banner{
+
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logoAlura{
+    margin-top: 1%;
+}
+
+.titulo{
+
+    font-size: 30px;
+    text-shadow: 3px 3px 3px black;
+}
+
+/*main*/
+
+.section1{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.section2{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.caja-input, .caja-output{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    gap: 20px;    
+}
+
+.enunciado{
+
+    font-size: 15px;
+    margin: 15px auto;
+}
+
+#muneco{
+
+    width: 50%;
+}
+
+/*estilos de areas de texto*/
+
+.areaTexto, .parrafoDesencriptado{
+
+    width: 100%;
+    height: 80%;
+    font-size: 15px;
+    padding: 10px;
+    margin: 15px auto;
+    letter-spacing: 2px;
+    line-height: 30px;
+    color: ghostwhite;
+    border: solid dimgray 1px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px black;
+
+    word-wrap: break-word;
+    overflow-x: hidden;
+    resize: none;
+}
+
+.parrafoDesencriptado{
+    
+    height: 100%;
+    display: none;   
+}
+
+/*botones*/
+
+.caja-botones{
+
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 8%;
+    margin-top: 3%;
+
+}
+
+.caja-botones .boton{
+
+    width: 150px;
+    font-size: 13px;
+    color: ghostwhite;
+    padding: 13px;
+    margin: 0 15px;
+    border-color:ghostwhite 1px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+
+}
+
+#btn-encriptar, #btn-desencriptar{
+
+    display: block;
+
+}
+
+#btn-copiar{
+
+    display: none;
+
+}
+
+/*footer*/
+
+.links{
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+           
+}
+
+.links li a{
+
+    text-decoration: none;
+
+}
+
+.textoFooter{
+
+    margin: 5px;
+}
+
+/*Segmento Responsive*/
+
+@media screen and (min-width: 280px) and (max-width: 600px) {
+
+    .titulo{
+
+        display: none;
+        
+    }
+
+    .enunciado{
+
+        font-size: 12px;
+    }
+
+    #muneco{
+
+        display: none;
+
+    }
+}
+@media screen and (min-height: 600px){
+
+    .caja-botones{
+
+        margin-top: 0;
+    }
+}
